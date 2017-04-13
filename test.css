@@ -1,0 +1,74 @@
+body{
+background-image: url('purty_wood.png');
+}
+
+p{
+font-family: Arial;
+font-size: 12px;
+}
+
+h3{
+  color: black;
+
+}
+
+li{
+
+}
+a{
+  color: white;
+  font-weight: bold;
+}
+#Header{
+ border: solid 8px black;
+ width: 580px;
+ margin-right: auto;
+ margin-left: auto;
+ margin-bottom: 10px;
+ text-align: center;
+}
+
+#Header h1{
+  font-size: 60px;
+  font-family: "passion-one";
+  color: #FFBC00;
+  font-weight: bold;
+}
+
+#LeftNav{
+border: 8px black;
+width: 400px;
+margin-bottom: 10px;
+float:left;
+text-align: center;
+padding-bottom: 8px
+color: white;
+}
+
+#LeftNav img{
+
+}
+
+#LeftNav ul{
+  list-style-type: none;
+  color: white;
+
+}
+#LeftNav h3{
+
+}
+#Content{
+margin-top: 10px;
+border: solid 8px black;
+width:700px;
+text-align: center;
+padding: 15px;
+}
+
+#Footer{text-align: center;
+
+}
+#Footer ul{
+  list-style-type: none;
+  padding-left: 0px;
+}
