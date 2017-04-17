@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US">
 <link rel="stylesheet" type="text/css" href="jobApplicationForm.css">
 <body>
+  <form name="input" action="html_form_action.asp" method="post">
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+.</canvas>
+
+  <script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.strokeText("Hello works",10,50);
+  </script>
+
+  <svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+
+</svg>
+
+<p><mark>Your way to success </mark><meter min="200" max="500"
+  value="350">350 degrees</meter>.</p>
+
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = "Welcome!";
+    </script>
 
 <div id="header">
-  <h1> Job Application Form </h1>
+  <h1 style="color:purple;"> Job Application Form </h1>
 </div>
 <div id="Content">
-  <p> Better work, Better future>
-  </P>
+  <p><i>Better work, Better future.</i></p>
 </div>
+
+
 <div id="LeftNav">
   <h3 class="titles"> Our positions </h3>
   <ul>
@@ -39,17 +65,65 @@ Password: <input type="password" name="pwd">
 
 </fieldset>
 
+<fieldset>
+<br>
+
+  Which position do you want?: <input type="position" name="applied position">
+</fieldset>
+<fieldset>
+  please input your adress: <input type="please input your adress" name="the Adress of the user">
+  </fieldset>
+  <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+
 <p name="essay">Are you a student?</p>
 <input type="radio" name="student-or-not" value="yes"> Yes<br> <input type="radio" name="student-or-not" value="no"> No
 <br>
 <input type="checkbox" name="vehicle" value="Bike">I have a bike<br> <input type="checkbox" name="vehicle" value="Car">I have a car
 <select name="cars-brand"> <option value="bmw">BMW</option> <option value="van">Van</option> <option value="fiat">Fiat</option> <option value="audi">Audi</option> </select>
 <input type="submit" value="Submit form">
+<br>
+<p>What is your previous work experience?</p>
+<textarea name="work experience"></textarea>
+<br>
+<hr>
+<div style="background-color:black;color:white;padding:2px;width: 20%;">
+  <h2>Jobs</h2>
+  <p>Joins us.</p>
+  <p>Walk to success.</p>
+</div>
+
+
+
 <div id="Footer">
   <footer>
     <p> Posted by Tony </p>
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
   <footer>
 </div>
+<ins>Your document will be reviewed soon</ins>
 
+</form>
  </body>
  </html>
